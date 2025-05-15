@@ -16,7 +16,7 @@ class Offers {
         $this->offer_id = $offer_id;
         return $this;
     }
-    public function get_offer_id() :string{
+    public function get_offer_id() :int{
     
         return $this->offer_id;
     }

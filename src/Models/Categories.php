@@ -12,7 +12,7 @@ class Categories {
         $this->category_id = $category_id;
         return $this;
     }
-    public function get_category_id() :string{
+    public function get_category_id() :int{
     
         return $this->category_id;
     }
