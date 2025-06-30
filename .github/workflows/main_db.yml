@@ -42,9 +42,9 @@ jobs:
           echo "DB_CONNECTION=mysql" >> .env
           echo "DB_HOST=${{ secrets.DB_HOST }}" >> .env
           echo "DB_PORT=3306" >> .env
-          echo "DB_DATABASE=${{ secrets.bassem_stores_offers }}" >> .env
-          echo "DB_USERNAME=${{ secrets.bassem_bassem }}" >> .env
-          echo "DB_PASSWORD=${{ secrets.A@b 1231231 }}" >> .env
+          echo "DB_DATABASE=${{ secrets.DB_DATABASE }}" >> .env
+          echo "DB_USERNAME=${{ secrets.DB_USERNAME }}" >> .env
+          echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" >> .env
           echo "BROADCAST_DRIVER=log" >> .env
           echo "CACHE_DRIVER=file" >> .env
           echo "FILESYSTEM_DISK=local" >> .env
@@ -73,9 +73,9 @@ jobs:
       - name: Upload to Bluehost FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.ftp.bassem.aden.vip }}
-          username: ${{ secrets.bassem }}
-          password: ${{ secrets.Ba913@#As }}
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
           local-dir: deploy/
           server-dir: /public_html/
           dangerous-clean-slate: false
