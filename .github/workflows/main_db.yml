@@ -16,8 +16,8 @@ jobs:
           php-version: '8.2'
           extensions: mbstring, bcmath, openssl, pdo, tokenizer, xml, ctype, fileinfo
       # 3. Install PHP dependencies
-      #- name: Install Composer dependencies
-      #  run: composer install --no-dev --optimize-autoloader
+      - name: Install Composer dependencies
+        run: composer install --no-dev --optimize-autoloader
       # 4. Set up Node.js
       #- name: Set up Node.js
       # uses: actions/setup-node@v3
@@ -80,5 +80,5 @@ jobs:
           server-dir: /public_html/
           dangerous-clean-slate: false
           exclude: |
-           **/vendor/**
+          # **/vendor/**
            **/node_modules/**
